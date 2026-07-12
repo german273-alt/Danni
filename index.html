@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    /* الصورة في بداية الصفحة */
+    .lesson-image {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    /* صندوق الصوت */
+    .audio-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+  </style>
+</head>
+  <meta charset="UTF-8">
+  <title>Lesson Page</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2SRXTR995"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y2SRXTR995');
+  </script>
+</head>
+<body>
+ 
+
+  <!-- الصوت -->
+  <div class="audio-box">
+    <p><strong>Audio</strong></p>
+    <audio controls>
+      <source src="audio/danni.mp3" type="audio/mpeg">
+      متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+  </div>
+  <!-- فاصل بين الصوت والنص -->
+<hr style="margin:20px 0; border:1px solid #ccc;">
+<style>
+.dialog-box{
+    max-width:850px;
+    margin:30px auto;
+    background:#ffffff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    font-family:Arial, sans-serif;
+    line-height:1.9;
+}
+
+.dialog-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#2c3e50;
+    margin-bottom:20px;
+}
+
+.line{
+    margin:12px 0;
+    padding:12px 16px;
+    border-radius:10px;
+}
+
+.daniel{
+    background:#f8f1ff;
+    border-left:5px solid #9b59b6;
+}
+
+.max{
+    background:#eef7ff;
+    border-left:5px solid #3498db;
+}
+
+.speaker{
+    font-weight:bold;
+}
+
+.daniel .speaker{
+    color:#8e44ad;
+}
+
+.max .speaker{
+    color:#2980b9;
+}
+</style>
+
+<div class="dialog-box">
+
+<div class="dialog-title">German Dialogue</div>
+<div class="line daniel"><span class="speaker">Daniel:</span> Da bist du ja!</div>
+
+<div class="line max"><span class="speaker">max:</span> Daniel, sag mal, spinnst du? Ich hätte es fast über den Schädel gezogen.</div>
+
+<div class="line daniel"><span class="speaker">daniel:</span> Zum Glück bist du ein schlechterer Golfer als Dad.</div>
+
+<div class="line max"><span class="speaker">max:</span> Warum brichst du ein und machst die Tür kaputt? Was machst du überhaupt hier, bist du nicht irgendwo auf dem Atlantik?</div>
+
+<div class="line daniel"><span class="speaker">daniel:</span> Da war ich bis gestern.</div>
+
+<div class="line max"><span class="speaker">max:</span> Gab es Probleme mit eurem Boot? Wo ist Polly?</div>
+
+<div class="line daniel"><span class="speaker">daniel:</span> Wir hatten eine Kollision mit einem Orca, mussten den nächsten Hafen anlaufen. Und in Marina Diorte treffen sich viele Weltenbummler. Typen wie Peter, Einhandsegler und Abenteurer. Jetzt ist er kein Einhandsegler mehr.</div>
+
+<div class="line max"><span class="speaker">max:</span> Polly hat sich ausgetauscht? War eben so?</div>
+
+<div class="line max"><span class="speaker">max:</span> Und was ist mit eurem Boot?</div>
+
+<div class="line daniel"><span class="speaker">daniel:</span> Mir war das alles zu viel. Hm. Ich hoffe, es ist okay, wenn ich hier unterschlüpfe?</div>
+
+<div class="line max"><span class="speaker">max:</span> Wozu hätten wir einen großen Bruder?</div>
+
+<div class="line daniel"><span class="speaker">daniel:</span> Um ihm auf die Nerven zu gehen. Mhm.</div>
+</div>
+
+<style>
+.vocab-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin:25px 0;
+}
+
+.vocab-card{
+background:#fff;
+border-radius:14px;
+padding:18px;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.25s;
+border:1px solid #eee;
+}
+
+.vocab-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.de{
+font-size:22px;
+font-weight:700;
+color:#1d3557;
+margin-bottom:8px;
+}
+
+.en{
+font-size:14px;
+color:#666;
+}
+
+.hint{
+text-align:center;
+font-size:13px;
+color:#888;
+margin-bottom:18px;
+}
+</style>
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('Da bist du ja!')">
+<div class="de">Da bist du ja!</div>
+<div class="en">There you are!</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Sag mal')">
+<div class="de">Sag mal</div>
+<div class="en">Tell me... / Hey...</div>
+</div>
+
+<div class="vocab-card" onclick="speak('spinnst du?')">
+<div class="de">Spinnst du?</div>
+<div class="en">Are you crazy?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Ich hätte es fast über den Schädel gezogen.')">
+<div class="de">Ich hätte es fast über den Schädel gezogen.</div>
+<div class="en">I almost hit you over the head with it.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Schädel')">
+<div class="de">der Schädel</div>
+<div class="en">skull</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Zum Glück')">
+<div class="de">Zum Glück</div>
+<div class="en">Luckily</div>
+</div>
+
+<div class="vocab-card" onclick="speak('schlechter')">
+<div class="de">schlechter</div>
+<div class="en">worse</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Golfer')">
+<div class="de">der Golfer</div>
+<div class="en">golfer</div>
+</div>
+
+<div class="vocab-card" onclick="speak('einbrechen')">
+<div class="de">einbrechen</div>
+<div class="en">to break in</div>
+</div>
+
+<div class="vocab-card" onclick="speak('die Tür kaputt machen')">
+<div class="de">die Tür kaputt machen</div>
+<div class="en">to break the door</div>
+</div>
+
+</div>
+
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('überhaupt')">
+<div class="de">überhaupt</div>
+<div class="en">anyway / at all</div>
+</div>
+
+<div class="vocab-card" onclick="speak('irgendwo')">
+<div class="de">irgendwo</div>
+<div class="en">somewhere</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Atlantik')">
+<div class="de">der Atlantik</div>
+<div class="en">the Atlantic Ocean</div>
+</div>
+
+<div class="vocab-card" onclick="speak('bis gestern')">
+<div class="de">bis gestern</div>
+<div class="en">until yesterday</div>
+</div>
+
+<div class="vocab-card" onclick="speak('es gab Probleme')">
+<div class="de">es gab Probleme</div>
+<div class="en">there were problems</div>
+</div>
+
+<div class="vocab-card" onclick="speak('das Boot')">
+<div class="de">das Boot</div>
+<div class="en">boat</div>
+</div>
+
+<div class="vocab-card" onclick="speak('die Kollision')">
+<div class="de">die Kollision</div>
+<div class="en">collision</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Orca')">
+<div class="de">der Orca</div>
+<div class="en">orca</div>
+</div>
+
+<div class="vocab-card" onclick="speak('den nächsten Hafen anlaufen')">
+<div class="de">den nächsten Hafen anlaufen</div>
+<div class="en">to head for the nearest port</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Hafen')">
+<div class="de">der Hafen</div>
+<div class="en">port / harbor</div>
+</div>
+
+</div>
+
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('sich treffen')">
+<div class="de">sich treffen</div>
+<div class="en">to meet</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Weltenbummler')">
+<div class="de">der Weltenbummler</div>
+<div class="en">globetrotter</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Typ')">
+<div class="de">der Typ</div>
+<div class="en">guy</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Einhandsegler')">
+<div class="de">der Einhandsegler</div>
+<div class="en">solo sailor</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Abenteurer')">
+<div class="de">der Abenteurer</div>
+<div class="en">adventurer</div>
+</div>
+
+<div class="vocab-card" onclick="speak('nicht mehr')">
+<div class="de">nicht mehr</div>
+<div class="en">no longer</div>
+</div>
+
+<div class="vocab-card" onclick="speak('austauschen')">
+<div class="de">austauschen</div>
+<div class="en">to replace / exchange</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Was ist mit...?')">
+<div class="de">Was ist mit...?</div>
+<div class="en">What about...?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Mir war das alles zu viel.')">
+<div class="de">Mir war das alles zu viel.</div>
+<div class="en">It all became too much for me.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('unterschlüpfen')">
+<div class="de">unterschlüpfen</div>
+<div class="en">to stay temporarily</div>
+</div>
+
+</div>
+
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('Ich hoffe, es ist okay.')">
+<div class="de">Ich hoffe, es ist okay.</div>
+<div class="en">I hope it's okay.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Wozu hätten wir einen großen Bruder?')">
+<div class="de">Wozu hätten wir einen großen Bruder?</div>
+<div class="en">What would we have a big brother for?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('auf die Nerven gehen')">
+<div class="de">auf die Nerven gehen</div>
+<div class="en">to get on someone's nerves</div>
+</div>
+<script>
+function speak(text){
+speechSynthesis.cancel();
+const u=new SpeechSynthesisUtterance(text);
+u.lang='de-DE';
+u.rate=0.9;
+speechSynthesis.speak(u);
+}
+</script>
+<h2 style="text-align:center;margin:30px 0 20px;font-size:28px;">
+⭐ Useful German Phrases
+</h2>
+
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('Da bist du ja!')">
+<div class="de">Da bist du ja!</div>
+<div class="en">There you are!</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Sag mal, spinnst du?')">
+<div class="de">Sag mal, spinnst du?</div>
+<div class="en">Are you out of your mind?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Ich hätte es fast über den Schädel gezogen.')">
+<div class="de">Ich hätte es fast über den Schädel gezogen.</div>
+<div class="en">I almost hit you over the head with it.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Zum Glück bist du ein schlechterer Golfer als Dad.')">
+<div class="de">Zum Glück bist du ein schlechterer Golfer als Dad.</div>
+<div class="en">Luckily, you're a worse golfer than Dad.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Warum brichst du ein und machst die Tür kaputt?')">
+<div class="de">Warum brichst du ein und machst die Tür kaputt?</div>
+<div class="en">Why are you breaking in and smashing the door?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Was machst du überhaupt hier?')">
+<div class="de">Was machst du überhaupt hier?</div>
+<div class="en">What are you doing here anyway?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Gab es Probleme mit eurem Boot?')">
+<div class="de">Gab es Probleme mit eurem Boot?</div>
+<div class="en">Were there any problems with your boat?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Was ist mit Polly?')">
+<div class="de">Was ist mit Polly?</div>
+<div class="en">What about Polly?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Mir war das alles zu viel.')">
+<div class="de">Mir war das alles zu viel.</div>
+<div class="en">It all became too much for me.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Ich hoffe, es ist okay, wenn ich hier unterschlüpfe.')">
+<div class="de">Ich hoffe, es ist okay, wenn ich hier unterschlüpfe.</div>
+<div class="en">I hope it's okay if I stay here for a while.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Wozu hätten wir einen großen Bruder?')">
+<div class="de">Wozu hätten wir einen großen Bruder?</div>
+<div class="en">What would we have a big brother for?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Um ihm auf die Nerven zu gehen.')">
+<div class="de">Um ihm auf die Nerven zu gehen.</div>
+<div class="en">To get on his nerves.</div>
+</div>
+
+</div>
+<style>
+.quiz-container{
+max-width:900px;
+margin:30px auto;
+font-family:Arial,sans-serif;
+}
+
+.quiz-card{
+background:#fff;
+border-radius:14px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.question{
+font-size:20px;
+font-weight:bold;
+margin-bottom:15px;
+color:#1d3557;
+}
+
+.option{
+display:block;
+padding:12px;
+margin:8px 0;
+background:#f7f7f7;
+border-radius:10px;
+cursor:pointer;
+transition:.25s;
+border:2px solid transparent;
+}
+
+.option:hover{
+background:#eef5ff;
+}
+
+.correct{
+background:#d4edda!important;
+border-color:#28a745!important;
+color:#155724;
+font-weight:bold;
+}
+
+.wrong{
+background:#f8d7da!important;
+border-color:#dc3545!important;
+color:#721c24;
+}
+
+.disabled{
+pointer-events:none;
+}
+</style>
+
+<script>
+function checkAnswer(el,correct){
+let card=el.parentElement;
+if(card.classList.contains("disabled")) return;
+
+card.classList.add("disabled");
+
+let options=card.querySelectorAll(".option");
+
+options.forEach(function(op){
+if(op.dataset.correct=="true"){
+op.classList.add("correct");
+}
+});
+
+if(correct!="true"){
+el.classList.add("wrong");
+}
+}
+</script>
+
+<div class="quiz-container">
+
+<div class="quiz-card">
+    <div class="quiz-container">
+
+<div class="quiz-card">
+<div class="question">1. Warum macht B Daniel Vorwürfe?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Weil er zu spät gekommen ist.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Weil er eingebrochen und die Tür kaputt gemacht hat.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Weil er das Auto genommen hat.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">2. Daniel war bis gestern auf dem ______.</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Mittelmeer</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) Pazifik</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">C) Atlantik</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">3. Das Boot musste den nächsten Hafen anlaufen, weil es eine ______ gab.</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Reparatur</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Kollision</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Kontrolle</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">4. „Wir hatten eine Kollision mit einem Orca.“<br>Was bedeutet <b>Kollision</b>?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) ein Treffen</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) ein Zusammenstoß</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) eine Reise</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">5. „Viele Weltenbummler treffen sich dort.“<br>Ein <b>Weltenbummler</b> ist jemand, der ...</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) viel arbeitet.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) gerne um die Welt reist.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Schiffe baut.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">6. Ein <b>Einhandsegler</b> ...</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) segelt alleine.</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) segelt mit seiner Familie.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) fährt ein Motorboot.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">7. „Jetzt ist er kein Einhandsegler mehr.“<br>Warum wahrscheinlich nicht?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Er hat das Segeln aufgegeben.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Polly segelt jetzt mit ihm.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Sein Boot ist kaputt.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">8. „Polly hat sich ausgetauscht?“<br>Was bedeutet hier <b>sich austauschen</b> am ehesten?</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) den Platz oder Partner wechseln</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) einkaufen gehen</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) telefonieren</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">9. Was bedeutet <b>spinnen</b>?</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) verrückt sein</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) lachen</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) schlafen</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">10. Was bedeutet <b>unterschlüpfen</b>?</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) kurz irgendwo wohnen</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) schnell laufen</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) sich verstecken und nie wiederkommen</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">11. Was passt zu <b>auf die Nerven gehen</b>?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) jemanden unterstützen</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) jemanden ärgern</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) jemanden besuchen</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">12. Was bedeutet <b>zum Glück</b>?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) leider</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) glücklicherweise</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) vielleicht</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">13. Warum fragt B nach Polly?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Weil sie krank ist.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Weil sie mit Daniel unterwegs war.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Weil sie zu Hause sein sollte.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">14. Wie reagiert Daniel auf die Frage nach dem Boot?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Er erzählt sofort alles ganz genau.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Er sagt, dass ihm alles zu viel wurde.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Er lacht darüber.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">15. Warum möchte Daniel bei seinem Bruder bleiben?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Er hat keine Wohnung mehr.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Er hofft, dort vorübergehend wohnen zu können.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Er will Urlaub machen.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">16. Wie reagiert der Bruder darauf?</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Er schickt Daniel sofort weg.</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) Er freut sich nicht.</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">C) Er erlaubt ihm zu bleiben.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">17. „Gab es Probleme mit eurem ______?“</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) Fahrrad</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Boot</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Zug</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">18. „Wir mussten den nächsten Hafen ______.“</div>
+<div class="option" onclick="checkAnswer(this,'false')">A) verlassen</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) anlaufen</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) verkaufen</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">19. „Typen wie Peter ...“<br>Hier bedeutet <b>Typen</b> ...</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) Männer / Leute</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) Autos</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Tiere</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">20. „Mir war das alles zu viel.“<br>Das bedeutet:</div>
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) Ich konnte die Situation nicht mehr gut ertragen.</div>
+<div class="option" onclick="checkAnswer(this,'false')">B) Ich wollte mehr Abenteuer.</div>
+<div class="option" onclick="checkAnswer(this,'false')">C) Ich hatte Langeweile.</div>
+</div>
+
+</div>
+<style>
+.end-buttons{
+  max-width:900px;
+  margin:40px auto;
+  text-align:center;
+}
+
+.end-buttons button{
+  padding:12px 18px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.reset-btn{
+  background:#ef4444;
+  color:#fff;
+}
+
+.reset-btn:hover{
+  background:#dc2626;
+}
+
+.back-btn{
+  background:#2563eb;
+  color:#fff;
+}
+
+.back-btn:hover{
+  background:#1d4ed8;
+}
+</style>
+<div class="end-buttons">
+
+  <button class="reset-btn" onclick="location.reload()">
+    🔄 Lektion wiederholen
+  </button>
+
+ 
+
+</div>
+
+</body>
+</html>
+
+
+
