@@ -356,15 +356,7 @@ margin-bottom:18px;
 <div class="de">auf die Nerven gehen</div>
 <div class="en">to get on someone's nerves</div>
 </div>
-<script>
-function speak(text){
-speechSynthesis.cancel();
-const u=new SpeechSynthesisUtterance(text);
-u.lang='de-DE';
-u.rate=0.9;
-speechSynthesis.speak(u);
-}
-</script>
+
 <h2 style="text-align:center;margin:30px 0 20px;font-size:28px;">
 ⭐ Useful German Phrases
 </h2>
@@ -432,6 +424,17 @@ speechSynthesis.speak(u);
 </div>
 
 </div>
+  <script>
+function speak(text){
+speechSynthesis.cancel();
+const u=new SpeechSynthesisUtterance(text);
+u.lang='de-DE';
+u.rate=0.9;
+speechSynthesis.speak(u);
+}
+</script>
+<h2 style="text-align:center;margin:30px 0 20px;font-size:28px;">
+⭐ Useful German Phrases
 <style>
 .quiz-container{
 max-width:900px;
